@@ -72,8 +72,15 @@ h2:after {
 /*---------------------------*/
 
 header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -82,13 +89,21 @@ nav {
 }
 
 .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     list-style: none;
 }
 
 .navigation-form {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 60%;
     flex: 0 60%;
 }
 
@@ -110,7 +125,11 @@ nav {
 
 .main-nav .search-box {
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border: 1px solid #555;
     padding-left: 10px;
@@ -164,7 +183,11 @@ main {
 }
 
 .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 20px 1%;
     padding: 25px 2%;
@@ -173,6 +196,8 @@ main {
 }
 
 .card-icon-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 10%;
     flex: 0 10%;
     border-radius: 50%;
     height: 80px;
@@ -184,6 +209,8 @@ main {
 }
 
 .card-details {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
@@ -282,17 +309,25 @@ footer {
 }
 
 .footer-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .footer-nav {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .social-links {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -300,6 +335,12 @@ footer {
 .social-links li {
     display: inline-block;
     margin-right: 20px;
+}
+
+.social-links li {
+    padding: 3px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 .footer-nav li:last-child,
@@ -323,17 +364,10 @@ footer {
     color: #000000;
 }
 
-.social-facebook,
-.social-twitter,
-.social-instagram {
+.social-facebook img,
+.social-twitter img,
+.social-instagram img {
     height: 18px;
-}
-
-.social-facebook,
-.social-twitter,
-.social-instagram {
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
 }
 
 .social-facebook:hover {
