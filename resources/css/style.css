@@ -177,7 +177,7 @@ main {
 /*---------------------------*/
 
 /* FIRST CHOICE */
-.card-items {
+/* .card-items {
     margin: 30px;
     padding: 0 5%;
 }
@@ -238,10 +238,10 @@ main {
     text-align: center;
     font-size: 60%;
     color: #f2f2f2;
-}
+} */
 
 /* SECOND CHOICE */
-/* .card-items {
+.card-items {
     margin-top: 30px;
     padding: 0 5%;
     display: flex;
@@ -295,7 +295,7 @@ main {
     text-align: center;
     font-size: 60%;
     color: #f2f2f2;
-} */
+}
 
 /*---------------------------*/
 /* FOOTER */
