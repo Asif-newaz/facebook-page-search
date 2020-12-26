@@ -16,6 +16,11 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /*---------------------------*/
@@ -51,6 +56,7 @@ h2 {
     font-size: 150%;
     text-align: center;
     letter-spacing: 1px;
+    color: #f1f1f1;
 }
 
 h3 {
@@ -82,10 +88,14 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
+    background-color: #fff;
+    position: relative;
+    z-index: 400;
 }
 
 nav {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .main-nav {
@@ -161,7 +171,10 @@ nav {
 /*---------------------------*/
 
 main {
-    background-color: #fff;
+    /* background-color: #fff; */
+    position: relative;
+    background-color: transparent;
+    z-index: 400;
 }
 
 /*---------------------------*/
@@ -254,7 +267,7 @@ main {
     align-items: center;
     margin: 0 1%;
     padding: 40px 2%;
-    background-color: #333;
+    /* background-color: #333; */
     border-radius: 8px;
 }
 
@@ -306,6 +319,9 @@ footer {
     margin-top: 40px;
     padding: 25px 2% 20px;
     font-size: 80%;
+
+    position: relative;
+    z-index: 400;
 }
 
 .footer-items {
@@ -389,4 +405,66 @@ footer p {
     color: #333;
     text-align: center;
     margin-top: 15px;
+}
+
+
+
+/* Background Animation */
+.background {
+    background: black url(../img/background.png) repeat 5% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    animation-name: STAR-MOVE;
+    animation-duration: 800s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.midground {
+    background: url(../img/midground.png) repeat 20% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	z-index: 200;
+	/* opacity: .1; */
+
+    animation-name: STAR-MOVE;
+    animation-duration: 700s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.foreground {
+    background: url(../img/foreground.png) repeat 35% 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+
+    animation-name: STAR-MOVE;
+    animation-duration: 600s;
+    animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	
+	/* animation: STAR-MOVE 100s linear delay infinite direction fill-mode; */
+}
+
+@keyframes STAR-MOVE {
+    from {
+        left: 0;
+        top: 0;
+    }
+    to {
+        left: -10000px;
+        top: -2000px;
+    }
 }
